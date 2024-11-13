@@ -10,8 +10,8 @@ import {firebase,auth,db} from './firebase'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-      <FirebaseContext.Provider value={{firebase,auth,db}}>
-      <BrowserRouter>
+      <FirebaseContext.Provider value={{firebase,auth,db}}>      
+        <BrowserRouter>
       <App />
       </BrowserRouter>
       </FirebaseContext.Provider>
