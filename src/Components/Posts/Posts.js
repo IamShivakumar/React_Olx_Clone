@@ -2,9 +2,10 @@ import React from 'react';
 
 import Heart from '../../assets/Heart';
 import './Post.css';
+import { useNavigate } from 'react-router-dom';
 
 function Posts() {
-
+const navigate=useNavigate()
   return (
     <div className="postParentDiv">
       <div className="moreView">
@@ -13,9 +14,7 @@ function Posts() {
           <span>View more</span>
         </div>
         <div className="cards">
-          <div
-            className="card"
-          >
+          <div className="card" onClick={()=>navigate('/viewposts')}>
             <div className="favorite">
               <Heart></Heart>
             </div>
@@ -46,9 +45,9 @@ function Posts() {
               <img src="../../../Images/R15V3.jpg" alt="" />
             </div>
             <div className="content">
-              <p className="rate">&#x20B9; 250000</p>
+              <p className="rate">&#x20B9;250000</p>
               <span className="kilometer">Two Wheeler</span>
-              <p className="name"> YAMAHA R15V3</p>
+              <p className="name">YAMAHA R15V3</p>
             </div>
             <div className="date">
               <span>10/5/2021</span>
