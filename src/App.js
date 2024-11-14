@@ -6,10 +6,12 @@ import Signup from './Pages/Signup'
 import { Routes,Route, useNavigate } from 'react-router-dom'
 import CreatePage from './Pages/Create';
 import ViewPost from './Pages/ViewPost';
+import Post from './store/ProductContext'
 function App() {
 
   return (
     <div>
+      <Post>
     <Routes>
       <Route exact path='/' element={<Home />} />
       <Route path='/login' element={<Login />}/>
@@ -17,6 +19,7 @@ function App() {
       <Route path='/create' element={<CreatePage />}/>
       <Route path='/viewposts/:id' element={<ViewPost />}/>
     </Routes>
+    </Post>
     </div>
   );
 }
